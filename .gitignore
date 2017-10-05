@@ -1,0 +1,4 @@
+airport.zip
+virtualenv
+data/*.csv
+data/vendor/*
