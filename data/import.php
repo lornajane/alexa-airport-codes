@@ -10,7 +10,6 @@
 /* Edit the Redis URL with creds in */
 
 $redis_url = '';
-$redis_url = "redis://admin:WDBKMUQKZUTODTNJ@sl-us-south-1-portal.4.dblayer.com:24174";
 
 /* Now don't edit anything else */
 
