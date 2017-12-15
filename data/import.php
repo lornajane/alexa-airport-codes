@@ -44,9 +44,12 @@ $count = 0;
 while ($airport = fgetcsv($fpa)) {
     if ($j > 0) {
         if($airport[13]) {
-            $redis->hset("code:" . $airport[13], "name", $airport[3], "country", $countries[$airport[8]]);
-            // echo $airport[13] . " : " . $airport[3] .  " in " . $countries[$airport[8]] . "\n";
-            $count++;
+            // only do large airports
+            if($airport[2] == "large_airport") {
+                $redis->hset("code:" . $airport[13], "name", $airport[3], "country", $countries[$airport[8]]);
+                // echo $airport[13] . " : " . $airport[3] .  " in " . $countries[$airport[8]] . "\n";
+                $count++;
+            }
         }
     }
 
